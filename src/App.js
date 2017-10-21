@@ -23,7 +23,7 @@ class App extends Component {
                     <Language/>
                     <Switch>
                         <Route exact path="/"><Redirect to="athega-quiz/sv"/></Route>
-                        <Route exact path="/athega-quiz"><Redirect to="athega-quiz/sv"/></Route>
+                        <Route exact path="/athega-quiz"><Redirect to="sv"/></Route>
                         <Route exact path="/athega-quiz/sv">
                             <ul>
                                 {

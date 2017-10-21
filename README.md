@@ -3,7 +3,7 @@
 A question terminal to be used with Tessel RFID scanners on an Athega party.
 
 ## Demo
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lvRQLC_Uqik" frameborder="0" allowfullscreen></iframe>
+[![Demo](https://img.youtube.com/vi/lvRQLC_Uqik/0.jpg)](https://www.youtube.com/watch?v=lvRQLC_Uqik "Demo")
 
 ## Live
 

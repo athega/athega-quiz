@@ -1,0 +1,17 @@
+.App {
+    margin: 0;
+    padding: 1em;
+}
+
+.App-logo {
+    width: 120px;
+    height: 160px;
+}
+
+.App-question {
+    text-decoration: none;
+    color: #000;
+    font-size: 120%;
+    display: inline-block;
+    padding: 5px 0;
+}

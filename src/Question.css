@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Acme');
+
+.Question-root {
+    font-family: 'Acme', sans-serif;
+    background-color: #fff;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.Question-question {
+    display: flex;
+    flex-direction: row;
+}
+
+.Question-text {
+    font-size: 200%;
+}
+
+.Question-image {
+    max-width: 30%;
+    align-self: center
+}
+
+.Question-respondent {
+    clear: both;
+    margin: 5em 0;
+}
+
+.Question-choices ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Question-choices ul li {
+    flex: 1;
+}
+
+.Question-choice {
+    display: block;
+    text-align: center;
+    font-size: 350%;
+    text-decoration: none;
+    color: #ff6633;
+    border: solid 4px #ff6633;
+    border-radius: 12px;
+    padding: 0.5em;
+    margin: 0.1em;
+}
+
+.Question-choice:hover {
+    background-color: #ff6633;
+    color: #fff;
+}
+
+.Question-thanks {
+    font-size: 350%;
+    color: #ff6633;
+    text-align: center;
+}
+
+.Question-scan {
+    font-size: 200%;
+    color: #ff6633;
+    text-align: center;
+}

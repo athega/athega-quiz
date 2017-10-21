@@ -1,0 +1,57 @@
+{
+  "extends": [
+    "eslint-config-airbnb-base",
+  ],
+  "plugins": [
+    "dependencies"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "comma-dangle": ["warn", "always-multiline"],
+    "consistent-return": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/no-mutable-exports": "off",
+    "indent": ["error", 4, {"SwitchCase": 1}],
+    "max-len": ["warn", {
+      "code": 120,
+      "ignoreUrls": true,
+      "ignoreComments": true,
+      "ignoreTemplateLiterals": true,
+      "ignorePattern": "LOG\\.(?:trace|debug|info|warn|error|fatal)"
+    }],
+    "no-empty-function": "off",
+    "no-mixed-operators": [
+      "error",
+      {
+        "groups": [
+          ["&", "|", "^", "~", "<<", ">>", ">>>"],
+          ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
+          ["&&", "||"],
+          ["in", "instanceof"]
+        ],
+        "allowSamePrecedence": true
+      }
+    ],
+    "no-restricted-syntax": "off",
+    "no-param-reassign": ["error", { "props": false }],
+    "no-plusplus": "off",
+    "no-underscore-dangle": "off",
+    "no-use-before-define": ["error", { "functions": false }],
+    "operator-assignment": "off",
+    "padded-blocks": "off",
+    "valid-jsdoc": "error",
+    "yield-star-spacing": ["error", "after"],
+    "dependencies/case-sensitive": 1,
+    "dependencies/no-cycles": 1,
+    "dependencies/no-unresolved": 1,
+    "dependencies/require-json-ext": 1
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  }
+}

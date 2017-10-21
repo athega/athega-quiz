@@ -1,0 +1,29 @@
+{
+  "name": "athega-quiz",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://athega.github.io/athega-quiz",
+  "dependencies": {
+    "gh-pages": "^1.0.0",
+    "qs": "^6.5.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.14"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "lint": "eslint src",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-dependencies": "^2.4.0",
+    "eslint-plugin-import": "^2.8.0"
+  }
+}

@@ -22,7 +22,7 @@ export default withRouter(({ history, match: { params: { language, qid, responde
     const query = parse(window.location.search.substr(1));
 
     if (respondent && query.answer) {
-        setTimeout(() => { history.push(`/${language}/question/${qid}`); }, 3000);
+        setTimeout(() => { history.push(`/athega-quiz/${language}/question/${qid}`); }, 3000);
     }
 
     return (

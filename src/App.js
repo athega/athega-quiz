@@ -19,24 +19,25 @@ class App extends Component {
         return (
             <Router>
                 <div className="App">
-                    <img className="App-logo" src="/aman.gif" alt="Athegamannen"/>
+                    <img className="App-logo" src="/athega-quiz/aman.gif" alt="Athegamannen"/>
                     <Language/>
                     <Switch>
-                        <Route exact path="/"><Redirect to="sv"/></Route>
-                        <Route exact path="/sv">
+                        <Route exact path="/"><Redirect to="athega-quiz/sv"/></Route>
+                        <Route exact path="/athega-quiz"><Redirect to="athega-quiz/sv"/></Route>
+                        <Route exact path="/athega-quiz/sv">
                             <ul>
                                 {
                                     Object.keys(questions)
                                         .map(qid =>
                                             <li>
-                                                <Link key={qid} to={`/sv/question/${qid}`} className="App-question">
+                                                <Link key={qid} to={`/athega-quiz/sv/question/${qid}`} className="App-question">
                                                     {questions[qid].text.sv}
                                                 </Link>
                                             </li>)
                                 }
                             </ul>
                         </Route>
-                        <Route path="/:language/question/:qid/:respondent?" component={Question}/>
+                        <Route path="/athega-quiz/:language/question/:qid/:respondent?" component={Question}/>
                     </Switch>
                 </div>
             </Router>

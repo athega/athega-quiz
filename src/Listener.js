@@ -7,7 +7,7 @@ export default withRouter(({ history, language, qid }) => {
 
     eventSource.addEventListener(`jullunch.respondent.${qid}`, (evt) => {
         const respondent = JSON.parse(evt.data);
-        history.push(`/${language}/question/${qid}/${respondent.rfid}`);
+        history.push(`/athega-quiz/${language}/question/${qid}/${respondent.rfid}`);
     }, false);
 
     eventSource.onerror = () => { window.alert('Event source failed!'); };

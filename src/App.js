@@ -22,14 +22,13 @@ class App extends Component {
                     <img className="App-logo" src="/athega-quiz/aman.gif" alt="Athegamannen"/>
                     <Language/>
                     <Switch>
-                        <Route exact path="/"><Redirect to="athega-quiz/sv"/></Route>
-                        <Route exact path="/athega-quiz"><Redirect to="sv"/></Route>
-                        <Route exact path="/athega-quiz/sv">
+                        <Route exact path="/"><Redirect to="athega-quiz"/></Route>
+                        <Route exact path="/athega-quiz">
                             <ul>
                                 {
                                     Object.keys(questions)
-                                        .map(qid =>
-                                            <li>
+                                        .map((qid, idx) =>
+                                            <li key={idx}>
                                                 <Link key={qid} to={`/athega-quiz/sv/question/${qid}`} className="App-question">
                                                     {questions[qid].text.sv}
                                                 </Link>

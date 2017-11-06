@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 import './Language.css';
 
-const LANG_RE = /^(\/athega-quiz\/)[^/]+/;
-const switchLanguage = (path, language) => path.replace(LANG_RE, `$1${language}`);
+const LANG_RE = /^(\/athega-quiz)\/?[^/]+/;
+const switchLanguage = (path, language) => path.replace(LANG_RE, `$1/${language}`);
 
 export default () => (
     <div className="Language-root">

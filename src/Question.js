@@ -2,6 +2,7 @@
 import React from 'react';
 import { parse } from 'qs';
 import { Link, withRouter } from 'react-router-dom';
+import fetch from 'isomorphic-fetch';
 import questions from './questions';
 import Listener from './Listener';
 import './Question.css';
@@ -22,6 +23,13 @@ export default withRouter(({ history, match: { params: { language, qid, responde
     const query = parse(window.location.search.substr(1));
 
     if (respondent && query.answer) {
+        fetch(
+            `http://fest.athega.se/register/quiz/${query.answer}/${respondent}`,
+            { method: 'PUT', mode: 'cors' },
+        )
+            .then(() => { console.log('Successfully posted answer', query.answer); })
+            .catch((err) => { console.log('Failed to post answer:', err); });
+
         setTimeout(() => { history.push(`/athega-quiz/${language}/question/${qid}`); }, 3000);
     }
 
